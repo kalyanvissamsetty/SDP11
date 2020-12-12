@@ -1,0 +1,33 @@
+<img src='../../assets/wall4.jpg'>
+<form class="box" method="POST" #userForm="ngForm">
+    <h1>
+        register
+    </h1>
+    <div class="form-group">
+        <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" [(ngModel)]="registerUserData.username" name="username" placeholder="Enter Username" id="username" required>
+        <small class="text-danger" [class.d-none]="name.valid || name.untouched">Username Required</small>
+    </div>
+<div class="form-group" [class.has-error]="email.invalid && email.touched">
+  <input required email type="text" class="form-control" [(ngModel)]="registerUserData.email" #email="ngModel" name="email" placeholder="Enter Email" id="email" required>
+<span class="text-danger" *ngIf="email.errors?.required && email.touched">Email is Required </span>
+<span class="text-danger" *ngIf="email.errors?.email && email.touched">Email is Invalid </span>
+</div>
+<div class="form-group">
+<input type="text" #phn="ngModel" required pattern="^\d{10}$" [class.is-invalid]="phn.invalid && phn.touched"class="form-control" [(ngModel)]="registerUserData.phone" name="phone" placeholder="Enter Phone Number" id="phone" required>
+<!-- <small class="text-danger" [class.d-none]="phn.valid || phn.untouched">10 digits are required</small> -->
+<div *ngIf="phn.errors &&  phn.touched">
+    <small class="text-danger" *ngIf="phn.errors.required">Phone number is required</small>
+    <small class="text-danger" *ngIf="phn.errors.pattern">Phone number must be 10 digits</small>
+</div>
+</div>
+
+
+<div class="form-group">
+<input type="password"  [class.is-invalid]="password.invalid && password.touched" required password #password="ngModel" class="form-control" [(ngModel)]="registerUserData.password" name="password" placeholder="Enter Password" id="password" required>
+<div *ngIf="password.errors && (password.invalid || password.touched)">
+    <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password Required</small>
+</div>
+</div>
+<input type="submit"  [disabled]= "userForm.form.invalid"value="Register" (click)="registerUser('Dismiss')">
+<button type="button" (click)="redirect()" class="btn btn-link" >Go to Login</button>
+</form>

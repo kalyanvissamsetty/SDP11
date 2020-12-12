@@ -1,0 +1,108 @@
+.example-card {
+  width: 1100px;
+}
+
+.example-header-image {
+  background-image: url("../../assets/circlelogo.png");
+  background-size: cover;
+}
+.small {
+  max-width: 100px;
+  margin-left: 70;
+}
+
+.view {
+  display: inline-flex;
+}
+
+.productname {
+  position: absolute;
+  left: 12%;
+  top: 3%;
+  font-family: 'Acme', sans-serif;
+}
+
+.remove {
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+}
+
+.price {
+  position: absolute;
+  right: 3%;
+  top: 7%;
+  font-family: 'Play', sans-serif;
+}
+
+.quantity {
+  position: absolute;
+  right: 15%;
+  bottom: 8%;
+  display: inline-flex;
+  left: 45%;
+}
+
+.quan {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 25px;
+  border: 1px solid #000;
+}
+
+.fa {
+  font-size: 20px;
+}
+
+
+.description {
+  position: absolute;
+  left: 12%;
+  top: 22%;
+  right: 10%;
+}
+.inputs{
+  width: 50px;
+}
+
+.toremove {
+  margin-right: 100px;
+}
+.bodybutton{
+  margin: 0;
+  padding: 0;
+  background: white
+}
+
+.containerbutton{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  display: inline;
+}
+
+.btn{
+  border: none;
+  margin: 20px;
+  padding: 24px;
+  width: 210px;
+  height:80px;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+  margin-left: 650px;
+}
+
+.btn3{
+  background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+}
+
+
+.btn:hover{
+  background-position: right;
+}

@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<mat-grid-list cols="3" rowHeight="0.8:1">
+    <div *ngFor="let i of headphones">
+        <mat-grid-tile>
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Photo of a Shiba Inu" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Type : {{i.type}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="opendialog1(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i,'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    
+    <div *ngFor="let i of speakers">
+        <mat-grid-tile>
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Photo of a Shiba Inu" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Battery : {{i.battery}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="opendialog2(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i,'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    
+    </mat-grid-list>
+    
+    

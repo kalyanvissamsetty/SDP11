@@ -1,0 +1,153 @@
+<app-navbar></app-navbar>
+<mat-grid-list cols="3" rowHeight="0.7:1">
+    <div *ngFor="let i of watches1">
+        <mat-grid-tile>
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Men fashion" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Color : {{i.dial_color}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="watch_open(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i,'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    <div *ngFor="let i of tops1">
+        <mat-grid-tile>
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Men fashion" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Material : {{i.fabric}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="tops_wear(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i,'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    <div *ngFor="let i of sunglasses1">
+        <mat-grid-tile>
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Men fashion" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Shape : {{i.shape}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="sunglasses_open(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i,'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    <div *ngFor="let i of handbags1">
+        <mat-grid-tile>
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Men fashion" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Material : {{i.material}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="handbag_wear(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i, 'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    <div *ngFor="let i of footwear1">
+        <mat-grid-tile>
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Men fashion" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Sole Type : {{i.sole}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="footwear_open(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i,'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    <div *ngFor="let i of bottomwear1">
+        <mat-grid-tile>
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.name}}</mat-card-title>
+                    </mat-card-header>
+                    <hr>
+                    <img mat-card-image src="{{i.img}}" class="small" alt="Men fashion" width="30px" height="200">
+                    <hr>
+                    <mat-card-content>
+                      <p>
+                        Color : {{i.color}}
+                      </p>
+                      <h6>Price : ₹{{i.price}}</h6>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button type="button" class="btn btn-info" btn-lg btn-block (click)="bottom_wear(i)">View More</button>
+                      <button type="button" class="btn btn-warning" btn-lg btn-block (click)="cart(i, 'Dismiss')">Add to Cart</button>
+                    </mat-card-actions>
+                  </mat-card>
+               
+        </mat-grid-tile>
+    </div>
+    </mat-grid-list>

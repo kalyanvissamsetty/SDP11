@@ -1,0 +1,23 @@
+.example-card {
+    max-width: 400px;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .example-header-image {
+    background-image: url("../../assets/circlelogo.png");
+    background-size: cover;
+  }
+  mat-grid-tile {
+    background: white;
+  }
+  .small {
+    width: 210px;
+    height: 260px;
+    margin-left: 70px;
+    margin-right: 50px;
+  }
+  button{
+      margin: 13px 12px 12px 28px;
+    }
+  

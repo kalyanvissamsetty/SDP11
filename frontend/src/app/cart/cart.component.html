@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="toremove" *ngIf="!invalid">
+  <button style="margin-left: 1350px; background-color:orchid; color: #fff;margin-top: 20px;margin-bottom: 20px;" mat-raised-button="primary" (click)="CartRemoval('Dismiss')">RemoveAll</button>
+</div>
+<mat-grid-list *ngIf="!invalid" cols="1" rowHeight="10:1.5">
+<div class="bot" *ngFor="let i of items">
+  <mat-grid-tile>
+          <mat-card class="example-card">
+              <mat-card-header class="header">
+             </mat-card-header>
+             &nbsp;&nbsp;
+              <img mat-card-image src="{{i.img}}" class="small" alt="Men fashion" width="300" height="150">
+              <div class="view">
+                <h4 class="productname">{{i.name}}</h4>
+                <h4 class="price">₹{{i.price}}</h4>
+                <!-- <div class="description">
+                  <p>When a team of explorers ventures into the catacombs that lie beneath the streets of Paris, they uncover the dark secret 
+                    that lies within this city of the dead.</p>
+                </div> -->
+                <div class="quantity">
+                  <button type="button" (click)="minus(i, 'Dismiss')"><i class="fa fa-minus"></i></button>
+                  <div class="quan">
+                    <input [(ngModel)]="i.quantity" class="inputs">
+                  </div>
+                  <button type="button" (click)="plus(i, 'Dismiss')"><i class="fa fa-plus"></i></button>
+                </div>
+                <button class="remove" mat-raised-button color="warn" (click)="Remove(i, 'Dismiss')">Remove</button>
+              </div>
+            </mat-card>
+         
+          </mat-grid-tile>
+      </div>
+</mat-grid-list>
+<div *ngIf="invalid">
+  <h1 style="margin: 20px; text-align: center; font-size: 75px; font-family: 'Nerko One', cursive;">Cart Was Empty!</h1>
+</div>
+<body class="bodybutton" *ngIf="!invalid">
+  <div class="containerbutton">
+
+    <button class="btn btn3" (click)='checkoutpage()'>Go to Checkout</button>
+
+  </div>
+</body>
+
